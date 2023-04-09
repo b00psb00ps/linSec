@@ -15,11 +15,11 @@ cp .zshrc ~/
 # download the stuff we'll need
 curl 'https://portswigger-cdn.net/burp/releases/download?product=community&version=2023.3.2&type=Linux' -o ~/Downloads/burpsuite_community_linux_v2023_3_2.sh
 curl https://bootstrap.pypa.io/get-pip.py -o ~/Downloads/get-pip.py
-curl https://dl.google.com/go/go1.19.8.linux-amd64.tar.gz -o ~/Downloads/go1.19.8.linux-amd64.tar.gz
+curl https://dl.google.com/go/go1.20.3.linux-amd64.tar.gz -o ~/Downloads/go1.20.3.linux-amd64.tar.gz
 curl https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb -o ~/Downloads/jdk-20_linux-x64_bin.deb
 
 # remove any old installation of golang - unzip & install new
-sudo rm -rf /usr/local/go && tar -C /usr/local -xzf ~/Downloads/go1.20.3.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf ~/Downloads/go1.20.3.linux-amd64.tar.gz
 
 # install jdk-20
 sudo dpkg -i ~/Downloads/jdk-20_linux-x64_bin.deb
