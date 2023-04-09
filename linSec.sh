@@ -9,6 +9,7 @@ fi
 # install ZSH from repo, set as default shell, copy new profile
 sudo apt install zsh
 chsh -s $(which zsh)
+mv zshrc .zshrc
 cp .zshrc ~/
 
 # download the stuff we'll need
