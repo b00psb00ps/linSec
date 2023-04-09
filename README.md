@@ -12,9 +12,12 @@ Creates a directory labeled 'tools' for the installationg of most of the tools, 
 
 ---
 ### Installation
-To install just run;
 
-`sudo ./linSec.sh`
+*don't forget to run* `sudo apt update; sudo apt upgrade` *before installation*
+
+To install just run the script follow any prompts;
+
+`./linSec.sh`
 
 ---
 Only tested on ZorinOS 16.2.
