@@ -28,13 +28,6 @@ sudo dpkg -i ~/Downloads/jdk-20_linux-x64_bin.deb
 sudo rm /etc/alternatives/java
 sudo ln -s /etc/alternatives/java /usr/lib/jvm/jdk-20/bin/java
 
-# move burp install script to tools dir, and run it
-mv ~/Downloads/burpsuite_community_linux_v2023_3_2.sh ~/$DIR
-chmod +x ~/$DIR/burpsuite_community_linux_v2023_3_2.sh
-~/$DIR/burpsuite_community_linux_v2023_3_2.sh
-# rename burpsuite execution file
-mv ~/$DIR/BurpSuiteCommunity ~/$DIR/burpsuite
-
 # add burpsuite, go & '~/.local/bin' to PATH
 echo "export PATH=$PATH:$HOME/$DIR/BurpSuiteCommunity/:/usr/local/go/bin:$HOME/go/bin/:$HOME/.local/bin:/snap/john-the-ripper/581/run" >> ~/.profile
 source ~/.profile
@@ -96,3 +89,10 @@ sudo snap install metasploit-framework
 # install wireshark & aircrack with apt
 sudo apt install wireshark-qt
 sudo apt install aircrack-ng
+
+# move burp install script to tools dir, and run it
+mv ~/Downloads/burpsuite_community_linux_v2023_3_2.sh ~/$DIR
+chmod +x ~/$DIR/burpsuite_community_linux_v2023_3_2.sh
+~/$DIR/burpsuite_community_linux_v2023_3_2.sh
+# rename burpsuite execution file
+mv ~/$DIR/BurpSuiteCommunity ~/$DIR/burpsuite
